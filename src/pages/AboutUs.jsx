@@ -143,7 +143,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-dark-50">
+      {/* <section className="section-padding bg-dark-50">
         <div className="container-custom">
           <SectionTitle
             subtitle="Our Team"
@@ -198,7 +198,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-primary-600 to-secondary-600">

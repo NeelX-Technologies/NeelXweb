@@ -6,7 +6,6 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
-import Pricing from './pages/Pricing';
 import Portfolio from './pages/Portfolio';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
@@ -34,7 +33,6 @@ function App() {
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
         <Route path="services/:slug" element={<ServiceDetails />} />
-        <Route path="pricing" element={<Pricing />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="contact" element={<Contact />} />

@@ -18,7 +18,6 @@ const Footer = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Pricing', path: '/pricing' },
     { name: 'Blog', path: '/blog' },
   ];
 
@@ -28,6 +27,7 @@ const Footer = () => {
     { name: 'SEO Optimization', path: '/services/seo-optimization' },
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
     { name: 'Website Maintenance', path: '/services/website-maintenance' },
+    { name: 'AI Chatbot Development', path: '/services/ai-chatbot-development' },
   ];
 
   const legalLinks = [

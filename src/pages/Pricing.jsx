@@ -49,7 +49,7 @@ const Pricing = () => {
                   <h3 className="text-2xl font-bold text-dark-900 mb-2">{plan.name}</h3>
                   <p className="text-dark-600 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-dark-900">₹{plan.price}</span>
+                    {/* <span className="text-5xl font-bold text-dark-900">₹{plan.price}</span> */}
                     <span className="text-dark-600">/{plan.period}</span>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const Pricing = () => {
                   <h3 className="text-2xl font-bold text-dark-900 mb-2">{plan.name}</h3>
                   <p className="text-dark-600 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-dark-900">₹{plan.price}</span>
+                    {/* <span className="text-5xl font-bold text-dark-900">₹{plan.price}</span> */}
                     <span className="text-dark-600">/{plan.period}</span>
                   </div>
                 </div>
@@ -170,9 +170,9 @@ const Pricing = () => {
                 <div className="text-5xl mb-4">{pkg.icon}</div>
                 <h4 className="text-xl font-bold text-dark-900 mb-2">{pkg.name}</h4>
                 <p className="text-dark-600 mb-4">{pkg.description}</p>
-                <p className="text-2xl font-bold text-primary-600 mb-4">
+                {/* <p className="text-2xl font-bold text-primary-600 mb-4">
                   From ₹{pkg.startingPrice}
-                </p>
+                </p> */}
                 <Link to="/contact">
                   <button className="w-full btn btn-outline text-sm">
                     Get Quote

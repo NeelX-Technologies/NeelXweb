@@ -38,7 +38,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services', hasDropdown: true },
-    { name: 'Pricing', path: '/pricing' },
+    // { name: 'Pricing', path: '/pricing' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About Us', path: '/about' },
     { name: 'Blog', path: '/blog' },
@@ -56,7 +56,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-dark-900 dark:bg-dark-950 text-white py-2 hidden md:block">
+      {/* <div className="bg-dark-900 dark:bg-dark-950 text-white py-2 hidden md:block">
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex gap-6">
@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navbar */}
       <nav 

@@ -17,12 +17,12 @@ export const faqData = [
     question: 'Do you work with clients globally?',
     answer: 'Yes! We work with clients worldwide. Our team is experienced in remote collaboration and we use modern communication tools to ensure seamless project management regardless of your location.'
   },
-  {
-    id: 4,
-    category: 'Pricing',
-    question: 'How much does a website cost?',
-    answer: 'Our pricing varies based on your requirements. Basic websites start at ₹499, professional websites at ₹1,499, and enterprise solutions at ₹3,999. We offer custom quotes for unique projects. Contact us for a detailed proposal.'
-  },
+  // {
+  //   id: 4,
+  //   category: 'Pricing',
+  //   question: 'How much does a website cost?',
+  //   answer: 'Our pricing varies based on your requirements. Basic websites start at ₹499, professional websites at ₹1,499, and enterprise solutions at ₹3,999. We offer custom quotes for unique projects. Contact us for a detailed proposal.'
+  // },
   {
     id: 5,
     category: 'Pricing',

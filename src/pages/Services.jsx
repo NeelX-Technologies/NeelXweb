@@ -63,13 +63,7 @@ const Services = () => {
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between pt-6 border-t border-dark-200 dark:border-dark-700">
-                      <div>
-                        <p className="text-sm text-dark-500 dark:text-dark-400">Starting at</p>
-                        <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                          ₹{service.pricing.basic}
-                        </p>
-                      </div>
+                    <div className="flex items-center justify-end pt-6 border-t border-dark-200 dark:border-dark-700">
                       <span className="text-primary-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                         Learn More
                         <FaArrowRight className="text-sm" />

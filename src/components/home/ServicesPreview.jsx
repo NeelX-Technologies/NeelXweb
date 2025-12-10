@@ -45,9 +45,9 @@ const ServicesPreview = () => {
                     ))}
                   </div>
                   <div className="flex items-center justify-between mt-6 pt-6 border-t border-dark-200 dark:border-dark-700">
-                    <span className="text-primary-600 dark:text-primary-400 font-semibold">
+                    {/* <span className="text-primary-600 dark:text-primary-400 font-semibold">
                       From ₹{service.pricing.basic}
-                    </span>
+                    </span> */}
                     <span className="text-primary-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                       Learn More
                       <FaArrowRight className="text-sm" />

@@ -308,6 +308,68 @@ export const servicesData = [
     },
     deliveryTime: 'Ongoing (Monthly)',
     category: 'Support'
+  },
+  {
+    id: 6,
+    slug: 'ai-chatbot-development',
+    title: 'AI Chatbot Development',
+    shortDescription: 'Intelligent chatbots that automate customer service and boost engagement 24/7.',
+    description: 'We develop advanced AI-powered chatbots that understand natural language, provide instant responses, and learn from interactions. Our chatbots integrate seamlessly with your website and business tools to enhance customer experience and reduce support costs.',
+    icon: '🤖',
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&auto=format&fit=crop',
+    features: [
+      'Natural Language Processing (NLP)',
+      'Multi-language Support',
+      'Custom Training & Knowledge Base',
+      'CRM & Database Integration',
+      'Analytics & Insights Dashboard',
+      'WhatsApp & Social Media Integration',
+      'Voice-enabled Chatbots',
+      'Automated Lead Generation'
+    ],
+    technologies: ['OpenAI', 'DialogFlow', 'Python', 'TensorFlow', 'Rasa', 'LangChain'],
+    benefits: [
+      '24/7 customer support without human intervention',
+      'Reduce support costs by up to 70%',
+      'Instant responses improve customer satisfaction',
+      'Qualify and capture leads automatically',
+      'Handle multiple conversations simultaneously',
+      'Continuous learning and improvement'
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Requirement Analysis',
+        description: 'Understand your business needs, use cases, and customer queries.'
+      },
+      {
+        step: 2,
+        title: 'Design Conversation Flow',
+        description: 'Create dialogue flows and user journey maps for natural interactions.'
+      },
+      {
+        step: 3,
+        title: 'AI Training',
+        description: 'Train the chatbot with your business data and industry knowledge.'
+      },
+      {
+        step: 4,
+        title: 'Integration & Testing',
+        description: 'Integrate with your systems and conduct thorough testing.'
+      },
+      {
+        step: 5,
+        title: 'Deployment & Optimization',
+        description: 'Launch the chatbot and continuously optimize based on performance data.'
+      }
+    ],
+    pricing: {
+      basic: 2499,
+      standard: 4999,
+      premium: 8999
+    },
+    deliveryTime: '3-6 weeks',
+    category: 'AI & Automation'
   }
 ];
 
