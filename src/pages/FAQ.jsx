@@ -76,7 +76,7 @@ const FAQ = () => {
                   Contact Support
                 </button>
               </a>
-              <a href="mailto:Conatact@neelxtechnologies.com">
+              <a href="mailto:contact@neelxtechnologies.com">
                 <button className="btn btn-outline-white btn-lg">
                   Email Us
                 </button>

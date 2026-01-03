@@ -117,7 +117,7 @@ const CallToAction = () => {
               </div>
             </a>
             <a 
-              href="mailto:Conatact@neelxtechnologies.com" 
+              href="mailto:contact@neelxtechnologies.com" 
               className="flex items-center gap-3 hover:text-white transition-colors group"
             >
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all">
@@ -125,7 +125,7 @@ const CallToAction = () => {
               </div>
               <div className="text-left">
                 <p className="text-sm">Email Us</p>
-                <p className="font-semibold text-white">Conatact@neelxtechnologies.com</p>
+                <p className="font-semibold text-white">contact@neelxtechnologies.com</p>
               </div>
             </a>
           </motion.div>
