@@ -105,7 +105,7 @@ const CallToAction = () => {
             className="flex flex-wrap justify-center gap-8 text-primary-100 dark:text-primary-200"
           >
             <a 
-              href="tel:+1234567890" 
+              href="tel:+919664078862" 
               className="flex items-center gap-3 hover:text-white transition-colors group"
             >
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all">
@@ -113,11 +113,11 @@ const CallToAction = () => {
               </div>
               <div className="text-left">
                 <p className="text-sm">Call Us Now</p>
-                <p className="font-semibold text-white">+1 (234) 567-890</p>
+                <p className="font-semibold text-white">+91 96640 78862</p>
               </div>
             </a>
             <a 
-              href="mailto:info@neelx.com" 
+              href="mailto:Conatact@neelxtechnologies.com" 
               className="flex items-center gap-3 hover:text-white transition-colors group"
             >
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all">
@@ -125,7 +125,7 @@ const CallToAction = () => {
               </div>
               <div className="text-left">
                 <p className="text-sm">Email Us</p>
-                <p className="font-semibold text-white">info@neelx.com</p>
+                <p className="font-semibold text-white">Conatact@neelxtechnologies.com</p>
               </div>
             </a>
           </motion.div>

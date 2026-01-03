@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom';
 import { 
   FaFacebookF, 
-  FaTwitter, 
   FaLinkedinIn, 
   FaInstagram,
   FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt,
   FaArrowRight
 } from 'react-icons/fa';
 
@@ -38,10 +36,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/share/1BnxZKtbbW/', label: 'Facebook' },
+    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/neelxtechnologies/posts/?feedView=all', label: 'LinkedIn' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/neelxtechnologies?utm_source=qr&igsh=bDRtem04dHNwNGp5', label: 'Instagram' },
   ];
 
   return (
@@ -128,34 +125,27 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919664078862"
                   className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
                 >
                   <FaPhone className="text-primary-400 mt-1" />
                   <div>
                     <p className="font-medium text-white">Phone</p>
-                    <p>+1 (234) 567-890</p>
+                    <p>+91 96640 78862</p>
                   </div>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@neelx.com"
+                  href="mailto:Conatact@neelxtechnologies.com"
                   className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
                 >
                   <FaEnvelope className="text-primary-400 mt-1" />
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <p>info@neelx.com</p>
+                    <p>Conatact@neelxtechnologies.com</p>
                   </div>
                 </a>
-              </li>
-              <li className="flex items-start gap-3 text-dark-300">
-                <FaMapMarkerAlt className="text-primary-400 mt-1" />
-                <div>
-                  <p className="font-medium text-white">Address</p>
-                  <p>123 Business Street<br />New York, NY 10001</p>
-                </div>
               </li>
             </ul>
           </div>
