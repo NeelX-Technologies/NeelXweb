@@ -1,0 +1,11 @@
+# Robots.txt for NeelX Technologies
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.neelxtechnologies.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
