@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaPlay } from 'react-icons/fa';
+import { FaArrowRight, FaPlay, FaWhatsapp } from 'react-icons/fa';
 import Button from '../common/Button';
 
 const Hero = () => {
@@ -182,6 +182,26 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href="https://wa.me/+919664078862?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <FaWhatsapp className="text-3xl" />
+        <motion.div
+          className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+      </motion.a>
     </section>
   );
 };
