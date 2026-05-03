@@ -19,6 +19,8 @@ import Refund from './pages/Refund';
 import Careers from './pages/Careers';
 import OrderForm from './pages/OrderForm';
 import ThankYou from './pages/ThankYou';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -48,6 +50,10 @@ function App() {
         <Route path="thank-you" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
       </Route>
+
+      {/* Admin Panel Routes */}
+      <Route path="/neelcadmin" element={<AdminLogin />} />
+      <Route path="/neelcadmin/dashboard" element={<AdminDashboard />} />
     </Routes>
   );
 }
