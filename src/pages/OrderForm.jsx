@@ -107,11 +107,14 @@ const OrderForm = () => {
     if (!formData.timeline) newErrors.timeline = 'Please select a timeline';
     if (!formData.projectDescription.trim()) {
       newErrors.projectDescription = 'Project description is required';
-    } else if (formData.projectDescription.trim().length < 50) {
-      newErrors.projectDescription = 'Please provide at least 50 characters';
+    } else if (formData.projectDescription.trim().length < 10) {
+      newErrors.projectDescription = 'Please provide at least 10 characters';
     }
 
     setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) {
+      console.log('Form validation failed with errors:', newErrors);
+    }
     return Object.keys(newErrors).length === 0;
   };
 
@@ -122,26 +125,33 @@ const OrderForm = () => {
       return;
     }
 
+    console.log('Form validation passed! Sending data to backend:', formData);
     setIsSubmitting(true);
+    setErrors((prev) => ({ ...prev, submit: '' }));
 
-    // TODO: Integrate with EmailJS
-    // Example EmailJS integration:
-    // emailjs.send('service_id', 'template_id', formData, 'user_id')
-    //   .then((response) => {
-    //     console.log('SUCCESS!', response.status, response.text);
-    //     navigate('/thank-you');
-    //   })
-    //   .catch((err) => {
-    //     console.error('FAILED...', err);
-    //     setErrors({ submit: 'Failed to submit. Please try again.' });
-    //     setIsSubmitting(false);
-    //   });
+    try {
+      const response = await fetch('http://localhost:5001/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Order Form Submitted:', formData);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to submit order');
+      }
+
+      console.log('Order Form Submitted:', data);
       navigate('/thank-you');
-    }, 2000);
+    } catch (err) {
+      console.error('FAILED...', err);
+      setErrors((prev) => ({ ...prev, submit: err.message || 'Failed to submit. Please try again.' }));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

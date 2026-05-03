@@ -137,13 +137,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contact@neelxtechnologies.com"
+                  href="mailto:neelxtechnologies@gmail.com"
                   className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
                 >
                   <FaEnvelope className="text-primary-400 mt-1" />
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <p>contact@neelxtechnologies.com</p>
+                    <p>neelxtechnologies@gmail.com</p>
                   </div>
                 </a>
               </li>
