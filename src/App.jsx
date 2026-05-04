@@ -52,8 +52,8 @@ function App() {
       </Route>
 
       {/* Admin Panel Routes */}
-      <Route path="/neelcadmin" element={<AdminLogin />} />
-      <Route path="/neelcadmin/dashboard" element={<AdminDashboard />} />
+      <Route path="/neelxadmin" element={<AdminLogin />} />
+      <Route path="/neelxadmin/dashboard" element={<AdminDashboard />} />
     </Routes>
   );
 }

@@ -22,7 +22,7 @@ const AdminLogin = () => {
       if (validEmails.includes(email) && password === validPassword) {
         localStorage.setItem('isAdminAuthenticated', 'true');
         localStorage.setItem('adminEmail', email);
-        navigate('/neelcadmin/dashboard');
+        navigate('/neelxadmin/dashboard');
       } else {
         setError('Invalid email or password. Please try again.');
         setIsLoading(false);

@@ -17,7 +17,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const isAuthenticated = localStorage.getItem('isAdminAuthenticated');
     if (isAuthenticated !== 'true') {
-      navigate('/neelcadmin');
+      navigate('/neelxadmin');
     } else {
       fetchOrders();
     }
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
   const handleLogout = () => {
     localStorage.removeItem('isAdminAuthenticated');
     localStorage.removeItem('adminEmail');
-    navigate('/neelcadmin');
+    navigate('/neelxadmin');
   };
 
   const filteredOrders = orders.filter(order => 
