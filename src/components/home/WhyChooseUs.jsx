@@ -91,13 +91,15 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-50 dark:bg-dark-800 rounded-xl p-6 hover:bg-primary-50 dark:hover:bg-dark-700 transition-colors group"
+                className="card-premium card-glow group"
               >
-                <feature.icon className="text-4xl text-primary-600 dark:text-primary-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h4 className="text-xl font-bold text-dark-900 dark:text-white mb-2">
+                <div className="w-14 h-14 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <feature.icon className="text-2xl text-primary-600 dark:text-primary-400" />
+                </div>
+                <h4 className="text-xl font-bold text-dark-900 dark:text-white mb-3">
                   {feature.title}
                 </h4>
-                <p className="text-dark-600 dark:text-dark-300">
+                <p className="text-dark-600 dark:text-dark-400 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

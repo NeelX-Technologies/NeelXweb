@@ -79,31 +79,36 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav 
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-500 ${
           isScrolled 
-            ? 'bg-white dark:bg-dark-900 shadow-lg' 
-            : 'bg-white dark:bg-dark-900'
+            ? 'glass py-2 shadow-premium' 
+            : 'bg-transparent py-4'
         }`}
       >
         <div className="container-custom">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center group">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-2"
+                className="flex items-center gap-3"
               >
-                <img 
-                  src="/neelX.jpeg" 
-                  alt="NeelX Technologies" 
-                  className="w-10 h-10 rounded-lg object-cover"
-                />
+                <div className="relative">
+                  <img 
+                    src="/neelX.jpeg" 
+                    alt="NeelX Technologies" 
+                    className="w-11 h-11 rounded-xl object-cover shadow-lg group-hover:rotate-6 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10" />
+                </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-dark-900 dark:text-white">
-                    Neel<span className="text-primary-600">X</span>
+                  <h1 className="text-2xl font-black tracking-tighter text-dark-900 dark:text-white flex items-center">
+                    NEEL<span className="text-primary-600">X</span>
                   </h1>
-                  <p className="text-xs text-dark-600 dark:text-dark-400 -mt-1">Technologies</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary-600 dark:text-primary-400 -mt-1">
+                    Technologies
+                  </p>
                 </div>
               </motion.div>
             </Link>
@@ -117,23 +122,26 @@ const Navbar = () => {
                       <NavLink
                         to={link.path}
                         className={({ isActive }) =>
-                          `flex items-center gap-1 font-medium transition-colors ${
-                            isActive ? 'text-primary-600' : 'text-dark-700 dark:text-dark-200 hover:text-primary-600'
+                          `relative flex items-center gap-1 font-bold text-sm uppercase tracking-wider transition-all duration-300 ${
+                            isActive 
+                              ? 'text-primary-600' 
+                              : 'text-dark-700 dark:text-dark-300 hover:text-primary-600'
                           }`
                         }
                       >
                         {link.name}
-                        <FaChevronDown className="text-xs" />
+                        <FaChevronDown className="text-[10px]" />
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full" />
                       </NavLink>
                       
                       {/* Dropdown Menu */}
-                      <div className="absolute left-0 top-full mt-2 w-56 bg-white dark:bg-dark-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="py-2">
+                      <div className="absolute left-0 top-full mt-2 w-64 glass dark:glass-dark rounded-xl shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                        <div className="py-3">
                           {serviceLinks.map((service) => (
                             <Link
                               key={service.path}
                               to={service.path}
-                              className="block px-4 py-2 text-dark-700 dark:text-dark-200 hover:bg-primary-50 dark:hover:bg-dark-700 hover:text-primary-600 transition-colors"
+                              className="block px-6 py-3 text-sm font-semibold text-dark-700 dark:text-dark-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 transition-all"
                             >
                               {service.name}
                             </Link>
@@ -145,12 +153,15 @@ const Navbar = () => {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `font-medium transition-colors ${
-                          isActive ? 'text-primary-600' : 'text-dark-700 dark:text-dark-200 hover:text-primary-600'
+                        `relative font-bold text-sm uppercase tracking-wider transition-all duration-300 ${
+                          isActive 
+                            ? 'text-primary-600' 
+                            : 'text-dark-700 dark:text-dark-300 hover:text-primary-600'
                         }`
                       }
                     >
                       {link.name}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 hover:w-full group-hover:w-full" />
                     </NavLink>
                   )}
                 </div>

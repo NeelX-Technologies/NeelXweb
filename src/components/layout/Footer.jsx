@@ -43,42 +43,49 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark-900 dark:bg-black text-white">
+    <footer className="bg-dark-950 text-white relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-600/10 blur-[120px] rounded-full pointer-events-none" />
+
       {/* Main Footer */}
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container-custom relative z-10 pt-20 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Company Info */}
-          <div>
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <img
-                src="/neelX.jpeg"
-                alt="NeelX Technologies"
-                className="w-10 h-10 rounded-lg object-cover"
-              />
+          <div className="space-y-8">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="relative">
+                <img
+                  src="/neelX.jpeg"
+                  alt="NeelX Technologies"
+                  className="w-12 h-12 rounded-xl object-cover shadow-2xl group-hover:rotate-6 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10" />
+              </div>
               <div>
-                <h3 className="text-2xl font-bold">
-                  Neel<span className="text-primary-400">X</span>
+                <h3 className="text-2xl font-black tracking-tighter">
+                  NEEL<span className="text-primary-500">X</span>
                 </h3>
-                <p className="text-xs text-dark-400 -mt-1">Technologies</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary-500 -mt-1">Technologies</p>
               </div>
             </Link>
 
-            <p className="text-dark-300 mb-6">
-              We provide cutting-edge web solutions to help your business grow online. From design to deployment, we've got you covered.
+            <p className="text-dark-400 leading-relaxed">
+              Empowering businesses through innovative digital solutions. We turn your vision into high-performance reality with cutting-edge technology and creative design.
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-dark-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+                  className="w-11 h-11 bg-dark-900 border border-white/5 rounded-xl flex items-center justify-center hover:bg-primary-600 hover:border-primary-500 transition-all duration-300 group"
                   aria-label={social.label}
                 >
-                  <social.icon />
+                  <social.icon className="text-lg group-hover:scale-110 transition-transform" />
                 </a>
               ))}
             </div>
@@ -86,15 +93,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-bold mb-8 relative inline-block">
+              Quick Links
+              <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-600 rounded-full" />
+            </h4>
+            <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-dark-300 hover:text-primary-400 transition-colors flex items-center gap-2 group"
+                    className="text-dark-400 hover:text-white transition-all flex items-center gap-2 group"
                   >
-                    <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
@@ -104,15 +114,18 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-bold mb-8 relative inline-block">
+              Our Services
+              <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-600 rounded-full" />
+            </h4>
+            <ul className="space-y-4">
               {services.map((service) => (
                 <li key={service.path}>
                   <Link
                     to={service.path}
-                    className="text-dark-300 hover:text-primary-400 transition-colors flex items-center gap-2 group"
+                    className="text-dark-400 hover:text-white transition-all flex items-center gap-2 group"
                   >
-                    <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -122,71 +135,75 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
-            <ul className="space-y-4">
+            <h4 className="text-lg font-bold mb-8 relative inline-block">
+              Get in Touch
+              <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary-600 rounded-full" />
+            </h4>
+            <ul className="space-y-6">
               <li>
                 <a
                   href="tel:+919664078862"
-                  className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
+                  className="flex items-center gap-4 text-dark-400 hover:text-white transition-all group"
                 >
-                  <FaPhone className="text-primary-400 mt-1" />
+                  <div className="w-10 h-10 bg-dark-900 border border-white/5 rounded-lg flex items-center justify-center group-hover:bg-primary-600 transition-colors">
+                    <FaPhone className="text-sm" />
+                  </div>
                   <div>
-                    <p className="font-medium text-white">Phone</p>
-                    <p>+91 96640 78862</p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-dark-500">Call Us</p>
+                    <p className="font-semibold">+91 96640 78862</p>
                   </div>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contact@neelxtechnologies.com"
-                  className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
+                  href="mailto:neelxtechnologies@gmail.com"
+                  className="flex items-center gap-4 text-dark-400 hover:text-white transition-all group"
                 >
-                  <FaEnvelope className="text-primary-400 mt-1" />
+                  <div className="w-10 h-10 bg-dark-900 border border-white/5 rounded-lg flex items-center justify-center group-hover:bg-primary-600 transition-colors">
+                    <FaEnvelope className="text-sm" />
+                  </div>
                   <div>
-                    <p className="font-medium text-white">Email</p>
-                    <p>contact@neelxtechnologies.com</p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-dark-500">Email Us</p>
+                    <p className="font-semibold">neelxtechnologies@gmail.com</p>
                   </div>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-dark-300">
-                <FaMapMarkerAlt className="text-primary-400 mt-1" />
-                <div>
-                  <p className="font-medium text-white">Address</p>
-                  <p>Jaipur Remote | Neemrana</p>
+              <li>
+                <div className="flex items-center gap-4 text-dark-400 group">
+                  <div className="w-10 h-10 bg-dark-900 border border-white/5 rounded-lg flex items-center justify-center">
+                    <FaMapMarkerAlt className="text-sm text-primary-500" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-dark-500">Our Location</p>
+                    <p className="font-semibold">Jaipur | Neemrana, Rajasthan</p>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-dark-800">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-dark-400 text-sm text-center md:text-left">
-              © {currentYear} NeelX Technologies. All rights reserved.
-            </p>
+        {/* Bottom Footer */}
+        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-dark-500 text-sm font-medium">
+            © {currentYear} Neel<span className="text-primary-500">X</span> Technologies. Crafted with precision.
+          </p>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              {legalLinks.map((link, index) => (
-                <span key={link.path} className="flex items-center gap-6">
-                  <Link
-                    to={link.path}
-                    className="text-dark-400 hover:text-primary-400 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                  {index < legalLinks.length - 1 && (
-                    <span className="text-dark-700">|</span>
-                  )}
-                </span>
-              ))}
-            </div>
+          <div className="flex gap-8">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="text-dark-500 hover:text-primary-500 text-xs font-bold uppercase tracking-widest transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </footer>
+
   );
 };
 

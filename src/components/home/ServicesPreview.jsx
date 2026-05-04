@@ -16,7 +16,7 @@ const ServicesPreview = () => {
           title="What We Offer"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -26,34 +26,35 @@ const ServicesPreview = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link to={`/services/${service.slug}`}>
-                <Card className="h-full hover:border-2 hover:border-primary-600 cursor-pointer">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-3">
+                <div className="card-premium card-glow h-full flex flex-col group cursor-pointer">
+                  <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-4 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-dark-600 dark:text-dark-300 mb-4 line-clamp-3">
+                  <p className="text-dark-600 dark:text-dark-400 mb-6 line-clamp-3 leading-relaxed">
                     {service.shortDescription}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  
+                  <div className="flex flex-wrap gap-2 mb-8">
                     {service.technologies.slice(0, 3).map((tech, idx) => (
                       <span
                         key={idx}
-                        className="text-xs bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 px-2 py-1 rounded"
+                        className="text-[10px] uppercase tracking-wider font-bold bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300 px-2.5 py-1 rounded-md"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center justify-between mt-6 pt-6 border-t border-dark-200 dark:border-dark-700">
-                    {/* <span className="text-primary-600 dark:text-primary-400 font-semibold">
-                      From ₹{service.pricing.basic}
-                    </span> */}
-                    <span className="text-primary-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Learn More
+
+                  <div className="mt-auto pt-6 border-t border-dark-100 dark:border-dark-700 flex items-center justify-between">
+                    <span className="text-primary-600 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                      Explore Service
                       <FaArrowRight className="text-sm" />
                     </span>
                   </div>
-                </Card>
+                </div>
               </Link>
             </motion.div>
           ))}
