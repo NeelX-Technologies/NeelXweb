@@ -33,54 +33,54 @@ const Contact = () => {
 
   const validate = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Invalid email address';
     }
-    
+
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone is required';
     } else if (!validatePhone(formData.phone)) {
       newErrors.phone = 'Invalid phone number';
     }
-    
+
     if (!formData.subject.trim()) {
       newErrors.subject = 'Subject is required';
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters';
     }
-    
+
     return newErrors;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const newErrors = validate();
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     // Simulate API call - Replace with EmailJS integration
     try {
       // TODO: Integrate with EmailJS
       // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_PUBLIC_KEY')
-      
+
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -89,7 +89,7 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-      
+
       // Redirect to thank you page after 2 seconds
       setTimeout(() => {
         window.location.href = '/thank-you';
@@ -147,8 +147,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-dark-900 mb-1">Email</h4>
-                    <a href="mailto:neelxtechnologies@gmail.com" className="text-dark-600 hover:text-primary-600 transition-colors">
-                      neelxtechnologies@gmail.com
+                    <a href="mailto:contact@neelxtechnologies.com" className="text-dark-600 hover:text-primary-600 transition-colors">
+                      contact@neelxtechnologies.com
                     </a>
                   </div>
                 </div>
@@ -160,9 +160,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-dark-900 mb-1">Address</h4>
                     <p className="text-dark-600">
-                      123 Business Street<br />
-                      New York, NY 10001<br />
-                      United States
+                      Jaipur Remote, Rajasthan, India<br />
+                      Neemrana, Rajasthan, India
                     </p>
                   </div>
                 </div>
@@ -328,7 +327,7 @@ const Contact = () => {
             className="rounded-xl overflow-hidden shadow-2xl"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825624477!2d75.65030540638515!3d26.88544791796718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adb4ad9fd13%3A0xc42fd1df7d0f50ac!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1714810000000!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

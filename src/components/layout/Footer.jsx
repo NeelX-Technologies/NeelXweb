@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { 
-  FaFacebookF, 
-  FaLinkedinIn, 
+import {
+  FaFacebookF,
+  FaLinkedinIn,
   FaInstagram,
   FaPhone,
   FaEnvelope,
-  FaArrowRight
+  FaArrowRight,
+  FaMapMarkerAlt
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -49,9 +50,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <img 
-                src="/neelX.jpeg" 
-                alt="NeelX Technologies" 
+              <img
+                src="/neelX.jpeg"
+                alt="NeelX Technologies"
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <div>
@@ -61,11 +62,11 @@ const Footer = () => {
                 <p className="text-xs text-dark-400 -mt-1">Technologies</p>
               </div>
             </Link>
-            
+
             <p className="text-dark-300 mb-6">
               We provide cutting-edge web solutions to help your business grow online. From design to deployment, we've got you covered.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -137,15 +138,22 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:neelxtechnologies@gmail.com"
+                  href="mailto:contact@neelxtechnologies.com"
                   className="flex items-start gap-3 text-dark-300 hover:text-primary-400 transition-colors"
                 >
                   <FaEnvelope className="text-primary-400 mt-1" />
                   <div>
                     <p className="font-medium text-white">Email</p>
-                    <p>neelxtechnologies@gmail.com</p>
+                    <p>contact@neelxtechnologies.com</p>
                   </div>
                 </a>
+              </li>
+              <li className="flex items-start gap-3 text-dark-300">
+                <FaMapMarkerAlt className="text-primary-400 mt-1" />
+                <div>
+                  <p className="font-medium text-white">Address</p>
+                  <p>Jaipur Remote | Neemrana</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -159,7 +167,7 @@ const Footer = () => {
             <p className="text-dark-400 text-sm text-center md:text-left">
               © {currentYear} NeelX Technologies. All rights reserved.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               {legalLinks.map((link, index) => (
                 <span key={link.path} className="flex items-center gap-6">

@@ -139,9 +139,9 @@ const Terms = () => {
               For questions about these terms, please contact us:
             </p>
             <div className="bg-dark-50 rounded-lg p-6">
-              <p className="text-dark-700 mb-2"><strong>Email:</strong> legal@neelx.com</p>
-              <p className="text-dark-700 mb-2"><strong>Phone:</strong> +1 (555) 123-4567</p>
-              <p className="text-dark-700 mb-0"><strong>Address:</strong> 123 Tech Street, San Francisco, CA 94105</p>
+              <p className="text-dark-700 mb-2"><strong>Email:</strong> neelxtechnologies@gmail.com</p>
+              <p className="text-dark-700 mb-2"><strong>Phone:</strong> +91 96640 78862</p>
+              <p className="text-dark-700 mb-0"><strong>Address:</strong> Jaipur Remote | Neemrana, Rajasthan, India</p>
             </div>
           </motion.div>
         </div>

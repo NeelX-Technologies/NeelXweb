@@ -14,24 +14,24 @@ const CallToAction = () => {
 
       {/* Floating Shapes */}
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -20, 0],
           rotate: [0, 5, 0]
         }}
-        transition={{ 
-          duration: 5, 
+        transition={{
+          duration: 5,
           repeat: Infinity,
-          ease: "easeInOut" 
+          ease: "easeInOut"
         }}
         className="absolute top-10 right-10 w-20 h-20 bg-white opacity-10 rounded-full"
       />
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, 20, 0],
           rotate: [0, -5, 0]
         }}
-        transition={{ 
-          duration: 7, 
+        transition={{
+          duration: 7,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1
@@ -104,8 +104,8 @@ const CallToAction = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="flex flex-wrap justify-center gap-8 text-primary-100 dark:text-primary-200"
           >
-            <a 
-              href="tel:+919664078862" 
+            <a
+              href="tel:+919664078862"
               className="flex items-center gap-3 hover:text-white transition-colors group"
             >
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all">
@@ -116,8 +116,8 @@ const CallToAction = () => {
                 <p className="font-semibold text-white">+91 96640 78862</p>
               </div>
             </a>
-            <a 
-              href="mailto:neelxtechnologies@gmail.com" 
+            <a
+              href="mailto:contact@neelxtechnologies.com"
               className="flex items-center gap-3 hover:text-white transition-colors group"
             >
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:bg-opacity-30 transition-all">
@@ -125,7 +125,7 @@ const CallToAction = () => {
               </div>
               <div className="text-left">
                 <p className="text-sm">Email Us</p>
-                <p className="font-semibold text-white">neelxtechnologies@gmail.com</p>
+                <p className="font-semibold text-white">contact@neelxtechnologies.com</p>
               </div>
             </a>
           </motion.div>

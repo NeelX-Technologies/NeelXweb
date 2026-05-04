@@ -35,11 +35,10 @@ const FAQ = () => {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${
-                    activeCategory === category
+                  className={`px-6 py-2 rounded-full font-medium transition-all ${activeCategory === category
                       ? 'bg-primary-600 text-white shadow-lg'
                       : 'bg-dark-100 dark:bg-dark-700 text-dark-700 dark:text-dark-200 hover:bg-primary-50 dark:hover:bg-dark-600'
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -76,7 +75,7 @@ const FAQ = () => {
                   Contact Support
                 </button>
               </a>
-              <a href="mailto:neelxtechnologies@gmail.com">
+              <a href="mailto:contact@neelxtechnologies.com">
                 <button className="btn btn-outline-white btn-lg">
                   Email Us
                 </button>
