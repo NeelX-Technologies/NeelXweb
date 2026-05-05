@@ -66,7 +66,7 @@ const Refund = () => {
             </p>
 
             <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">4. Service-Specific Refund Policies</h2>
-            
+
             <h3 className="text-xl font-semibold text-dark-800 dark:text-dark-200 mb-3">4.1 Website Development Projects</h3>
             <ul className="list-disc pl-6 mb-4 text-dark-700 dark:text-dark-300">
               <li>Refunds are not available once design mockups are approved</li>
@@ -168,7 +168,7 @@ const Refund = () => {
               For refund requests or questions about this policy:
             </p>
             <div className="bg-dark-50 rounded-lg p-6">
-              <p className="text-dark-700 mb-2"><strong>Email:</strong> neelxtechnologies@gmail.com</p>
+              <p className="text-dark-700 mb-2"><strong>Email:</strong> contact@neelxtechnologies.com</p>
               <p className="text-dark-700 mb-2"><strong>Phone:</strong> +91 96640 78862</p>
               <p className="text-dark-700 mb-2"><strong>Address:</strong> Jaipur Remote | Neemrana, Rajasthan, India</p>
               <p className="text-dark-700 mb-0"><strong>Business Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM IST</p>
