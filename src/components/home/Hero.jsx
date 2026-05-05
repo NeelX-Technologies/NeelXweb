@@ -109,9 +109,9 @@ const Hero = () => {
           >
             <div className="relative z-10 w-full aspect-square rounded-[3rem] overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-transparent transition-colors duration-500" />
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426" 
-                alt="Digital Innovation" 
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
+                alt="Digital Innovation"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -154,7 +154,7 @@ const Hero = () => {
 
       {/* Floating WhatsApp Button */}
       <motion.a
-        href="https://wa.me/918003310994?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services"
+        href="https://wa.me/919664078862?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 active:scale-95 group"
